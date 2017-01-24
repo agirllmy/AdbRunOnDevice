@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,26 +8,28 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.test.adb.adbtest.MainActivity">
-
-    <Button
+    tools:context="com.test.adb.adbtest.MainActivity"
+    android:orientation="vertical">
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/adb_kill_server"
-        android:text="adb kill server"/>
-    <Button
+        android:text="请选择盒子类型"
+        android:textSize="18sp"/>
+    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/adb_start_server"
-        android:text="adb start server"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/adb_devices"
-        android:text="adb devices"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/adb_kill_server"
-        android:text="adb kill server"/>
-</RelativeLayout>
+        android:layout_marginTop="20dp" >
+        <RadioButton
+            android:id="@+id/alibaba_device_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="阿里云系列"
+            android:textSize="16sp"/>
+        <RadioButton
+            android:id="@+id/normal_tv_box_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="其他"
+            android:textSize="16sp"/>
+    </RadioGroup>
+</LinearLayout>

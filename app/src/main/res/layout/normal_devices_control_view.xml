@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/adb_kill_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="adb kill server" />
+
+    <Button
+        android:id="@+id/adb_start_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="adb start server" />
+
+    <Button
+        android:id="@+id/adb_devices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="adb devices" />
+
+    <Button
+        android:id="@+id/adb_kill_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="adb kill server" />
+</LinearLayout>
