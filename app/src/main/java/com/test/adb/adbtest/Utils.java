@@ -33,6 +33,24 @@ public class Utils {
                 + (ipAdress >> 24 & 0xFF);
     }
 
+    public static String getHexString(int decimal) {
+        String hex = Integer.toHexString(decimal);
+        if (TextUtils.isEmpty(hex)) {
+            return "0000";
+        }
+        switch (hex.length()) {
+            case 1:
+                return "000" + hex;
+            case 2:
+                return "00" + hex;
+            case 3:
+                return "0" + hex;
+            case 4:
+                return hex.toUpperCase();
+            default:
+                return "0000";
+        }
+    }
     public static String getIpPrefix(Context context) {
         context = context.getApplicationContext();
         int ipAdress = getWIFILocalIpAdress(context);

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <Button
         android:id="@+id/adb_kill_server"
         android:layout_width="match_parent"
@@ -20,9 +22,42 @@
         android:layout_height="wrap_content"
         android:text="adb devices" />
 
-    <Button
-        android:id="@+id/adb_kill_server"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="adb kill server" />
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/input_ip"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="输入要连接设备的IP地址" />
+
+        <Button
+            android:id="@+id/adb_connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="adb connect" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/adb_disconnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="adb disconnect" />
+
+    <Button
+        android:id="@+id/adb_install"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="adb install" />
+
+    <TextView
+        android:id="@+id/command_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/black" />
 </LinearLayout>

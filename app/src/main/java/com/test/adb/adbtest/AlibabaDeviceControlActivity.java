@@ -81,6 +81,7 @@ public class AlibabaDeviceControlActivity extends Activity {
                     }
                 }
             }).start();
+
         }
 
     }
